@@ -888,6 +888,10 @@
 								}
 							}
 
+							console.log('Response status:', response.status);
+							const text = await response.text();
+							console.log('Response body:', text);
+							
 							if (response.status === 200) {
 								if(response.redirected) {
 									window.location.replace(response.url);
